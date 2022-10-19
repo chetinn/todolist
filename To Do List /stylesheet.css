@@ -1,0 +1,166 @@
+body {
+    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    margin: 0px;
+    padding: 0px;
+    height: 700px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+    color: rgb(255, 119, 0);
+    font-size: 70px;
+    margin-top: 45px;
+    display: inline-block;
+    position: relative;
+    left: 38%;
+}
+
+.container {
+    /* From https://css.glass */
+    background: rgba(255, 162, 0, 0.29);
+    width: 600px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border: 5px solid #ff7701;
+    height: fit-content;
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: #f7797d;
+    opacity: 70%;
+}
+
+.add {
+    width: 100%;
+    border: 1px white;
+    border-radius: 15px;
+    background: rgb(255, 174, 33);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-size: larger;
+}
+
+::placeholder {
+    text-align: center;
+    color: white;
+}
+
+.container i:hover {
+    color: white;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buttons .due {
+    /* From https://css.glass */
+    background: rgba(255, 145, 0, 0.991);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border: 5px solid #ff7701;
+    width: 50%;
+    height: 35px;
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+
+.due:hover {
+    background: rgba(246, 141, 3, 0.991);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border: 7px solid #ff7701;
+}
+
+.container i {
+    position: absolute;
+    z-index: 1;
+    left: 550px;
+    top: 10px;
+}
+
+.taskholder {
+    width: 550px;
+    height: 100%;
+
+    justify-content: center;
+}
+.task {
+    background: rgba(246, 141, 3, 0.991);
+    width: 550px;
+    height: 70px;
+    margin: 25px;
+    font-size: 20px;
+    border: 4px solid #ff7701;
+    color: white;
+}
+
+.task label {
+    position: relative;
+    left: 30px;
+    top: 25px;
+}
+
+.taskholder .delete {
+    position: relative;
+    top: 23px;
+    left: 500px;
+}
+
+.taskholder .delete:hover {
+    color: red;
+}
+
+input[type="checkbox"] {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    transform: scale(2);
+    position: relative;
+    top: 26px;
+    left: 10px;
+}
+
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+        transform: rotateX(90deg);
+    }
+    50% {
+        opacity: 0.5;
+        transform: rotateX(0deg);
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.fade-out {
+    animation-name: fadeOutAnimation;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+}
